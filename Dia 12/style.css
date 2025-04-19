@@ -1,0 +1,53 @@
+body{
+    height: 100vh;
+    overflow: hidden;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 350px;
+    height: 500px;
+    perspective: 800px;
+
+}
+
+.card{
+    height: 100px;
+    width: 100px;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+}
+
+.front-side, .back-side{
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    box-shadow: 0 0 5px 2px grey;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front-side{
+    background-size: 100%;
+    background-image: url('https://www.google.com/imgres?q=mercedes&imgurl=https%3A%2F%2Fwww2.mercedes-benz.com.br%2Fcontent%2Fdam%2Fhq%2Fpassengercars%2Fcars%2Fbodytypes-landingpages%2Fcompact-cars%2Fstage%2F07-2023%2Fmercedes-benz-compact-cars-stage-3840x3840-07-2023.jpg%2F1740020442411.jpg%3Fim%3DCrop%2Crect%3D(1344%2C717%2C2496%2C2496)%3BResize%3D(828)&imgrefurl=https%3A%2F%2Fwww2.mercedes-benz.com.br%2Fpassengercars%2Fmodels%2Fhatchback.html&docid=pNyB5OmcyJcFMM&tbnid=a0UMFNXMvHUP6M&vet=12ahUKEwi_8tSHmuSMAxU6IbkGHd7AI0AQM3oECBcQAA..i&w=828&h=828&hcb=2&ved=2ahUKEwi_8tSHmuSMAxU6IbkGHd7AI0AQM3oECBcQAA');
+
+}
+
+.back-side{
+    background-color: black;
+    transform: rotateY('180deg');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: colum;
+    gap: 5rem;
+}
+
+.container:hover > .card{
+    cursor: pointer;
+    transform: rotateY('180deg');
+}
