@@ -1,4 +1,4 @@
- import pandas as pd
+import pandas as pd
 import numpy as np
 
 #agrupanmento dos salarios por departamento
@@ -11,11 +11,11 @@ data={
 df = pd.DataFrame(data)
 
 #filtragem dos funcionarios de TI
-funcionarios_ti = df[df['Departamento'] == TI]
+funcionarios_ti = df[df['Departamento'] == 'TI']
 print(funcionarios_ti)
 
 #media salarial
-media_salaria = funcionaerios_ti['salario' ].mean()
+media_salaria = funcionarios_ti['salario' ].mean()
 
 #exibindo o resultado
 print(f"Média salarial dos funcionarios de TI: {media_salarial}")
